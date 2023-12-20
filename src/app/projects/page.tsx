@@ -1,0 +1,20 @@
+import React from "react";
+import ProjectCard from "@/components/ProjectCard/ProjectCard";
+import projects, { IProject } from "@/constants/projects";
+
+const Projects = () => {
+  return (
+    <div>
+      <h1>Projects</h1>
+      <ul>
+        {projects.map((project: IProject) => (
+          <li key={project.id}>
+            <ProjectCard project={project} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Projects;
