@@ -15,7 +15,8 @@ const projects: IProject[] = [
   {
     id: nanoid(),
     title: "ecosolution",
-    description: "",
+    description:
+      "Landing page Ecosolution with a responsive layout. Development and implementation of renewable non-polluting energy sources, generating power generation using energy wind, sun, water, biomass.Main features: Fixed header that changes color when scrolling, smooth scrolling, slider, automatic counter, accordion.",
     role: "Developer",
     technologes: ["HTML", "CSS", "JS", "REACT"],
     img: ["", ""],

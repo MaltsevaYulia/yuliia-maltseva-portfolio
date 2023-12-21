@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 import NavBar from "../NavBar/NavBar";
 
 const Header = () => {
@@ -7,6 +9,7 @@ const Header = () => {
       <h1 className="visually-hidden ">
         Yuliia Maltseva FullStack Developer portfolio
       </h1>
+      <DarkModeToggle />
       <NavBar />
     </header>
   );

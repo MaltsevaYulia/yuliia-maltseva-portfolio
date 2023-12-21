@@ -1,21 +1,56 @@
+"use client";
 import React from "react";
-// Import Swiper React components
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCube, Navigation, Pagination } from "swiper/modules";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cube";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import "./styles.css";
 
-// import required modules
-import { EffectCube, Pagination } from "swiper/modules";
-
 const Slider = () => {
   return (
-    <>
+    <div className="container">
       <Swiper
+        navigation
+        pagination={{ type: "fraction" }}
+        modules={[Navigation, Pagination]}
+        // onSwiper={(swiper: any) => console.log(swiper)}
+        className="h-96 w-full rounded-lg"
+      >
+        <SwiperSlide>
+          <Image
+            src="/assets/hero.jpg"
+            alt="Album"
+            width={300}
+            height={300}
+            className="block h-full w-full object-contain"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/assets/hero.jpg"
+            alt="Album"
+            width={300}
+            height={300}
+            className="block h-full w-full object-contain"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/assets/hero.jpg"
+            alt="Album"
+            width={300}
+            height={300}
+            className="block h-full w-full object-contain"
+          />
+        </SwiperSlide>
+      </Swiper>
+
+      {/* <Swiper
         effect={"cube"}
         grabCursor={true}
         cubeEffect={{
@@ -28,12 +63,30 @@ const Slider = () => {
         modules={[EffectCube, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>1</SwiperSlide>
-        <SwiperSlide>2</SwiperSlide>
-        <SwiperSlide>3</SwiperSlide>
-        <SwiperSlide>4</SwiperSlide>
-      </Swiper>
-    </>
+        <SwiperSlide><Image
+            src="/assets/hero.jpg"
+            alt="Album"
+            width={300}
+            height={300}
+            className="block h-full w-full object-contain"
+          /></SwiperSlide>
+        <SwiperSlide><Image
+            src="/assets/hero.jpg"
+            alt="Album"
+            width={300}
+            height={300}
+            className="block h-full w-full object-contain"
+          /></SwiperSlide>
+        <SwiperSlide><Image
+            src="/assets/hero.jpg"
+            alt="Album"
+            width={300}
+            height={300}
+            className="block h-full w-full object-contain"
+          /></SwiperSlide>
+        
+      </Swiper> */}
+    </div>
   );
 };
 

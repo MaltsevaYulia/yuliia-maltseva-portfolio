@@ -39,6 +39,7 @@ p {
 
 a {
   display: inline-block;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -75,4 +76,54 @@ button {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+
+/* Theme */
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+}
+
+.dark {
+  background-color: rgb(13, 6, 41);
+  color: #bbb;
+
+}
+
+.light {
+  background-color: white;
+  color: #111;
+  --text-stroke-color: rgba(0, 0, 0, 0.875);
+}
+
+.theme {
+  transition: .6s all ease-in-out;
+}
+
+/* Swiper */
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  width: 500px;
+  height: 500px;
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px; */
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
