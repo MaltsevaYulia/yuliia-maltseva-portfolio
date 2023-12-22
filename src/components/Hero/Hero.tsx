@@ -19,6 +19,7 @@ const Hero = () => {
           alt="Yuliia Maltseva Portrait Photo"
           width={300}
           height={300}
+          priority={true}
           sizes="(100vw, 100vh)"
           className="rounded-xl brightness-125 hover:grayscale transition duration-300 ease-in-out hover:rotate-6 rotate-0"
         />

@@ -10,6 +10,12 @@ export const ThemeProvider = ({ children }) => {
     setMode((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
+  // useEffect(() => {
+  //   const savedTheme = localStorage.getItem("theme");
+  //   if (savedTheme && (savedTheme === "light" || savedTheme === "dark")) {
+  //     setMode(savedTheme);
+  //   }
+  // }, []);
 
   useEffect(() => {
     localStorage.setItem("theme", mode);

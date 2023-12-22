@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@import-normalize;
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/public/assets/fonts/Manrope.ttf') format('truetype');
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --transitionHover: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --cubic-bezier:cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,15 +27,41 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  font-family: 'Manrope';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+    }
 }
 
 /* Reset */
+
+* {
+  box-sizing: border-box;
+} 
+
 h1,
 h2,
 h3,
@@ -88,7 +123,6 @@ button {
 .dark {
   background-color: rgb(13, 6, 41);
   color: #bbb;
-
 }
 
 .light {
@@ -98,7 +132,7 @@ button {
 }
 
 .theme {
-  transition: .6s all ease-in-out;
+  transition: 0.6s all ease-in-out;
 }
 
 /* Swiper */
