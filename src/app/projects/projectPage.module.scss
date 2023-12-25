@@ -1,0 +1,13 @@
+.project{
+&_title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+&_list{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+}
