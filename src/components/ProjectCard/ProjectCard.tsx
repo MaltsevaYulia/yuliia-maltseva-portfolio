@@ -13,7 +13,7 @@ const ProjectCard = ({ project }: { project: IProject }) => {
     title,
     description,
     role,
-    technologes = ["HTML", "CSS", "JS", "REACT"],
+    technologes,
     img,
     git,
     url,

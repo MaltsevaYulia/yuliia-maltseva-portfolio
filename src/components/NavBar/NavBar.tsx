@@ -3,13 +3,13 @@ import Link from "next/link";
 import navBarLinks from "@/constants/navBarLinks";
 import css from "./NavBar.module.scss";
 
-const NavBar = () => {
+const NavBar = ({ isOpen }: { isOpen:boolean }) => {
   return (
-    <nav className={css.nav}>
-      <ul className="flex  items-center justify-center gap-2">
+    <nav className={isOpen ? css.nav_active : css.nav}>
+      <ul className={css.nav_list}>
         {navBarLinks.map(({ title, url, id }) => (
           <li key={id}>
-            <Link href={url} className={css.link}>
+            <Link href={url} className={css.nav_link}>
               {title}
             </Link>
           </li>
