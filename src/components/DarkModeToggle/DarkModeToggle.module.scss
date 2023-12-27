@@ -1,11 +1,10 @@
-// .wrapper {
-//     transform: scale(1);
-//         transition: scale 250ms var(--cubic-bezier);
-    
-//     &:hover {
-//         transform: scale(1.2);
-//          transition: scale 250ms var(--cubic-bezier);
-//     }
-    
-  
-// }
+.wrapper {
+  z-index: 99;
+  // transform: scale(1);
+  //     transition: scale 250ms var(--cubic-bezier);
+
+  // &:hover {
+  //     transform: scale(1.2);
+  //      transition: scale 250ms var(--cubic-bezier);
+  // }
+}

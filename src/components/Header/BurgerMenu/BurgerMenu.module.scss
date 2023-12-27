@@ -1,0 +1,12 @@
+.burgerBox {
+  background: #fff;
+}
+
+.btn {
+  @media (min-width: 768px) {
+    display: none;
+  }
+  &_close {
+    z-index: 99;
+  }
+}

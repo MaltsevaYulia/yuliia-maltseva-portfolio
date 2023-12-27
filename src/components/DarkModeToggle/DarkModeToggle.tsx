@@ -12,11 +12,11 @@ const DarkModeToggle = () => {
       <DarkModeSwitch
         checked={mode === "light"}
         onChange={toggle}
-        size={40}
+        size={32}
         moonColor="#FFC107"
         sunColor="#FFC107"
       />
-    </div>
+     </div>
   );
 };
 
