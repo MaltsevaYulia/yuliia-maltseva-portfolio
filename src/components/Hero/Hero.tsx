@@ -6,7 +6,7 @@ import css from "./Hero.module.scss";
 const Hero = () => {
   return (
     <>
-      <section className="bg-[url('/static/png/grid.png')] w-full h-screen bg-cover bg-center flex lg:flex-row flex-col items-center lg:-mt-20 mt-0">
+      <section className="bg-[url('/static/png/grid.png')] h-screen bg-cover bg-center flex lg:flex-row flex-col items-center lg:-mt-20 mt-0">
         <div className="flex flex-col text-center justify-center mb-2">
           <div className="flex flex-col text-start justify-center mb-2">
             <h1 className={css.text}>Frontend developer</h1>
