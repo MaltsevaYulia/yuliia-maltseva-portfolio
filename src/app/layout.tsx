@@ -25,9 +25,7 @@ export default function RootLayout({
         <ThemeProvider>
           <BGContainer>
             <Header />
-            <main className="flex min-h-screen flex-col items-center justify-between p-24">
-              {children}
-            </main>
+            <main className="container">{children}</main>
 
             <Footer />
           </BGContainer>

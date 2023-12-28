@@ -4,49 +4,74 @@
 
 @import-normalize;
 
+/* @font-face {
+  font-family: "Manrope";
+  src: url("/public/assets/fonts/Manrope.ttf") format("truetype");
+} */
+
 @font-face {
-  font-family: 'Manrope';
-  src: url('/public/assets/fonts/Manrope.ttf') format('truetype');
+  font-family: "DancingScript-Bold";
+  font-style: normal;
+  font-weight: 700;
+ font-display: fallback;
+  src: url("/public/fonts/DancingScript-Bold.ttf") format('truetype');;
+}
+
+@font-face {
+  font-family: "Carattere-Regular";
+  font-style: normal;
+  font-weight: 700;
+ font-display: fallback;
+  src: url("/public/fonts/Carattere-Regular.ttf") format('truetype');;
 }
 
 @font-face {
   font-family: "PlayfairDisplay";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url('/public/fonts/PlayfairDisplay-Regular.ttf');
+  /* font-display: swap; */
+  src: url("/public/fonts/PlayfairDisplay-Regular.ttf");
 }
 
 @font-face {
   font-family: "PlayfairDisplay-Bold";
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-  src: url('/public/fonts/');
+  /* font-display: swap; */
+  src: url("/public/fonts/");
+}
+
+@font-face {
+  font-family: "Allison-Regular";
+  font-style: normal;
+  font-weight: 400;
+  /* font-display: swap; */
+  src: url("/public/fonts/Allison-Regular.ttf");
 }
 
 @font-face {
   font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url('/public/fonts/Nunito-Regular.ttf');
+  /* font-display: swap; */
+  src: url("/public/fonts/Nunito-Regular.ttf");
 }
 
 @font-face {
   font-family: "Raleway-Medium";
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
-  src: url('/public/fonts/Raleway-Medium.ttf');
+  /* font-display: swap; */
+  src: url("/public/fonts/Raleway-Medium.ttf");
 }
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --transitionHover: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --cubic-bezier:cubic-bezier(0.4, 0, 0.2, 1)
+  --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,7 +84,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  font-family: 'Manrope';
+  /* font-family: "PlayfairDisplay"; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: linear-gradient(
@@ -68,32 +93,30 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-   
 }
 
 .container {
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-    
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
 
-    @media screen and (min-width: 480px) {
-        width: 480px;
-    }
-    @media screen and (min-width: 768px) {
-        width: 768px;
-    }
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
 
-    @media screen and (min-width: 1200px) {
-        width: 1200px;
-    }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 /* Reset */
 
 * {
   box-sizing: border-box;
-} 
+}
 
 h1,
 h2,

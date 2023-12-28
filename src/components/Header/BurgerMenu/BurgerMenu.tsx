@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useMedia from "@/hooks/useMedia";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import NavBar from "@/components/NavBar/NavBar";
 import css from "./BurgerMenu.module.scss";
@@ -27,7 +28,7 @@ const BurgerMenu = () => {
       <NavBar isOpen={isOpen} toggleBurgerMenu={toggleBurgerMenu} />
       {!isOpen ? (
         <button type="button" className={css.btn} onClick={toggleBurgerMenu}>
-          <GiHamburgerMenu size="32" />
+          <RxHamburgerMenu size="30" />
         </button>
       ) : (
         <button
@@ -35,7 +36,7 @@ const BurgerMenu = () => {
           className={[css.btn, css.btn_close].join(" ")}
           onClick={toggleBurgerMenu}
         >
-          <IoClose size="32" />
+          <IoClose size="30" />
         </button>
       )}
     </>

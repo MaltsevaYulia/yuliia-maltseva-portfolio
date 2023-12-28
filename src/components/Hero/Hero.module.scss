@@ -1,8 +1,32 @@
 .title {
-
-  font-family: "Playfair Display";
-  font-size: 64px;
+  font-family: "PlayfairDisplay-Bold";
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
+  @media screen and (min-width: 768px) {
+    font-size: 50px;
+  }
+}
+
+.text {
+  color: var(--brand-yellow, #fdc435);
+  font-family: Nunito;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.link {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #fdc435;
+  font-family: Nunito;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
 }

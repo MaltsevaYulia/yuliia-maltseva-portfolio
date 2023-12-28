@@ -4,7 +4,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+
+    background-image: url("/assets/yellow-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
     position: fixed;
     transform: translateX(100%);
     top: 0;
