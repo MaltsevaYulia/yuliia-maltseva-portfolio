@@ -20,7 +20,7 @@ export interface IProject {
 const projects: IProject[] = [
   {
     id: nanoid(),
-    title: "ECOSOLUTION",
+    title: "Ecosolution",
     description:
       "Landing page Ecosolution with a responsive layout. Development and implementation of renewable non-polluting energy sources, generating power generation using energy wind, sun, water, biomass.Main features: Fixed header that changes color when scrolling, smooth scrolling, slider, automatic counter, accordion.",
     role: "Developer",
@@ -40,7 +40,7 @@ const projects: IProject[] = [
   },
   {
     id: nanoid(),
-    title: "YOUR PET",
+    title: "Your pet",
     description:
       "A website with a responsive layout. Find a pet by searching in different categories, see the detailed information about the pet. Search for news related to animals. Read about the site's partners and their contact information. Register to be able to add and remove your ads, add animals to favorites. Verify your email. View and edit your profile, add your pets. Use the website on different devices.",
     role: "Developer,scrum master",
@@ -61,7 +61,7 @@ const projects: IProject[] = [
 
   {
     id: nanoid(),
-    title: "NEWS WEBSITE",
+    title: "News website",
     description:
       "A news site where you can read popular news, news by category, and search for news bykeyword. Readed news are saved on the read page. It is also possible to add/remove favorite new andview them on the Favorites page. Deploy project on Parcel.",
     role: "Developer",
@@ -81,7 +81,7 @@ const projects: IProject[] = [
   },
   {
     id: nanoid(),
-    title: "REACT-NATIVE APP",
+    title: "React-Native App",
     description:
       "This is a mobile app that allows users to navigate through different screens based on theirauthentication status. The app demonstrates the use of React Navigation for implementing navigationflows and Redux for managing application state.Users can view a list of posts, including informationsuch as post images, names, number of comments, and number of likes. They can also view commentsfor specific posts and add their own comments and view on the map the location where the photo wastaken.",
     role: "Developer",
@@ -101,7 +101,7 @@ const projects: IProject[] = [
   },
   {
     id: nanoid(),
-    title: "WEBSTUDIO",
+    title: "Webstudio",
     description: "My first project after the course HTML, CSS",
     role: "Developer",
     technologes: ["HTML", "SASS", "JS"],

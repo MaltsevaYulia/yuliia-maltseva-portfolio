@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLink } from "react-icons/fa";
 
@@ -27,11 +26,9 @@ const ProjectCard = ({ project }: { project: IProject }) => {
 
         <div className={css.card_info}>
           <div className="">
-            <h2 className="text-gray-900 font-bold text-xl ">{title}</h2>
-            <p className="text-gray-700 text-base ">{description}</p>
-            <p className="text-sm text-gray-600 flex items-center">
-              Role:{role}
-            </p>
+            <h2 className={css.card_title}>{title}</h2>
+            <p className={css.card_description}>{description}</p>
+            <p className={css.card_description}>Role:{role}</p>
           </div>
 
           <div className={css.tech_box}>
@@ -52,7 +49,7 @@ const ProjectCard = ({ project }: { project: IProject }) => {
                 rel="noopener noreferrer"
                 aria-label={`go to ${title} project gitHub `}
               >
-                <FaGithub size={20}  className={css.icon} />
+                <FaGithub size={20} className={css.icon} />
               </Link>
             </li>
             {url && (
@@ -63,7 +60,7 @@ const ProjectCard = ({ project }: { project: IProject }) => {
                   rel="noopener noreferrer"
                   aria-label={`go to ${title} project website `}
                 >
-                  <FaLink size={20}  className={css.icon} />
+                  <FaLink size={20} className={css.icon} />
                 </Link>
               </li>
             )}

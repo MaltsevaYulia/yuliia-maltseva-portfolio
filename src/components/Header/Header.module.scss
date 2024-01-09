@@ -1,14 +1,15 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  height: 91px;
 }
 
 .wrapper {
-    display: flex;
-    align-items: center;
-    gap:10px
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

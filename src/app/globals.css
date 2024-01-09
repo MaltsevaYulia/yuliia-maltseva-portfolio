@@ -9,67 +9,68 @@
   src: url("/public/assets/fonts/Manrope.ttf") format("truetype");
 } */
 
-@font-face {
+/* @font-face {
   font-family: "DancingScript-Bold";
   font-style: normal;
   font-weight: 700;
  font-display: fallback;
   src: url("/public/fonts/DancingScript-Bold.ttf") format('truetype');;
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: "Carattere-Regular";
   font-style: normal;
   font-weight: 700;
  font-display: fallback;
   src: url("/public/fonts/Carattere-Regular.ttf") format('truetype');;
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: "PlayfairDisplay";
   font-style: normal;
   font-weight: 400;
-  /* font-display: swap; */
+  font-display: swap;
   src: url("/public/fonts/PlayfairDisplay-Regular.ttf");
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: "PlayfairDisplay-Bold";
   font-style: normal;
   font-weight: 700;
-  /* font-display: swap; */
+  font-display: swap;
   src: url("/public/fonts/");
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: "Allison-Regular";
   font-style: normal;
   font-weight: 400;
-  /* font-display: swap; */
+  font-display: swap;
   src: url("/public/fonts/Allison-Regular.ttf");
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
-  /* font-display: swap; */
+  font-display: swap;
   src: url("/public/fonts/Nunito-Regular.ttf");
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: "Raleway-Medium";
   font-style: normal;
   font-weight: 500;
-  /* font-display: swap; */
+  font-display: swap;
   src: url("/public/fonts/Raleway-Medium.ttf");
-}
+} */
 
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --yellow: #fdc435;
   --transitionHover: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -84,7 +85,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* font-family: "PlayfairDisplay"; */
+  font-family: Playfair_Display;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: linear-gradient(
@@ -182,7 +183,7 @@ button {
 }
 
 .light {
-  background-color: white;
+  background-color: #F9FAFF;
   color: #111;
   --text-stroke-color: rgba(0, 0, 0, 0.875);
 }
@@ -198,15 +199,7 @@ body {
   height: 100%;
 }
 
-.swiper {
-  width: 500px;
-  height: 500px;
-  /* position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -150px;
-  margin-top: -150px; */
-}
+
 
 .swiper-slide {
   background-position: center;
@@ -216,4 +209,8 @@ body {
 .swiper-slide img {
   display: block;
   width: 100%;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
+  background-color: var(--yellow);
 }

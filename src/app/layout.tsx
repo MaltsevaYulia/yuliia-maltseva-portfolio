@@ -4,14 +4,15 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import { ThemeProvider } from "@/context/ThemeContext";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const playfair_Display = Playfair_Display({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Yuliia Maltseva portfolio",
   description: "Yuliia Maltseva portfolio",
+
 };
 
 export default function RootLayout({
@@ -21,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={playfair_Display.className}>
         <ThemeProvider>
           <BGContainer>
             <Header />

@@ -6,8 +6,8 @@ import css from "./Hero.module.scss";
 const Hero = () => {
   return (
     <>
-      <section className="bg-[url('/static/png/grid.png')] h-screen bg-cover bg-center flex lg:flex-row flex-col items-center lg:-mt-20 mt-0">
-        <div className="flex flex-col text-center justify-center mb-2">
+      <section className={css.hero}>
+        <div className="flex flex-col text-center justify-center">
           <div className="flex flex-col text-start justify-center mb-2">
             <h1 className={css.text}>Frontend developer</h1>
             <h2 className={css.title}>
@@ -22,7 +22,7 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className="w-100 mt-5 md:mt-10 lg:mt-0  ">
+        <div className="w-100">
           <Image
             src="/assets/hero.jpg"
             alt="Yuliia Maltseva Portrait Photo"
