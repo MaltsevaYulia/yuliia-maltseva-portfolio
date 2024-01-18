@@ -18,7 +18,7 @@ const navBarLinks = [
   },
   {
     id: nanoid(),
-    url: "/certificates",
+    url: "/assets/Yuliia_Maltseva_Certificate.pdf",
     title: "Certificates",
   },
   {

@@ -27,7 +27,14 @@ const NavBar = ({
       <ul className={css.nav_list}>
         {navBarLinks.map(({ title, url, id }) => (
           <li key={id} onClick={toggleBurgerMenu}>
-            <Link href={url} className={css.nav_link}>
+            <Link
+              href={url}
+              className={css.nav_link}
+              target={
+                title === "Certificates" || title === "Resume" ? "_blank" : ""
+              }
+              rel="noopener noreferrer"
+            >
               {title}
             </Link>
           </li>
