@@ -7,11 +7,13 @@ import TextareaField from "@/components/ContactMeForm/Formik/TextareaField";
 import validationSchema from "@/schemas/validationSchema";
 
 import styles from "./ContactMeForm.module.scss";
+import sendMail from "@/helpers/sendMail";
 
 const ContactMeForm = () => {
-  
-  const handleSubmit = (values, actions) => {
 
+  const handleSubmit = (values, actions) => {
+  console.log("🚀 ~ handleSubmit ~ values:", values)
+// sendMail({ to, name, subject, body });
   };
 
   return (
