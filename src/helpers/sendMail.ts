@@ -1,21 +1,28 @@
+"use server";
 import nodemailer from "nodemailer";
-import { GiMailShirt } from "react-icons/gi";
 
-const { SMTP_EMAIL, SMTP_PASSWORD } = process.env;
+import { config } from "dotenv";
 
-interface IProps {
+config();
+
+export interface IProps {
   to: string;
   name: string;
   subject: string;
   body: string;
 }
 
-const sendMail = async ({ to,name, subject, body }: IProps) => {
+const sendMail = async ({ to, name, subject, body }: IProps) => {
+  const { NEXT_PUBLIC_ADMIN_EMAIL, NEXT_PUBLIC_ADMIN_PASSWORD } = process.env;
+
   const transport = nodemailer.createTransport({
-    service: "gmail",
+    // service: "gmail",
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
     auth: {
-      user: SMTP_EMAIL,
-      pass: SMTP_PASSWORD,
+      user: NEXT_PUBLIC_ADMIN_EMAIL,
+      pass: NEXT_PUBLIC_ADMIN_PASSWORD,
     },
   });
   try {
@@ -26,7 +33,7 @@ const sendMail = async ({ to,name, subject, body }: IProps) => {
   }
   try {
     const sendResult = await transport.sendMail({
-      from: SMTP_EMAIL,
+      from: NEXT_PUBLIC_ADMIN_EMAIL,
       to,
       subject,
       html: body,
