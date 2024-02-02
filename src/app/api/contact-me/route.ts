@@ -8,14 +8,14 @@ export async function POST(req: {
     const data = await req.json();
     console.log("🚀 ~ POST ~ data:", data);
     const { name, subject, body } = data;
-    sendMail({
+    const info = await sendMail({
       to: "muscoprof@gmail.com",
       name,
       subject,
       body,
     });
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, info });
   } catch (err: any) {
     console.error(err);
     return NextResponse.json({ error: err.message }, { status: err.status });

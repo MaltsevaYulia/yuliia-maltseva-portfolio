@@ -1,10 +1,6 @@
 "use server";
 import nodemailer from "nodemailer";
 
-import { config } from "dotenv";
-
-config();
-
 export interface IProps {
   to: string;
   name: string;
