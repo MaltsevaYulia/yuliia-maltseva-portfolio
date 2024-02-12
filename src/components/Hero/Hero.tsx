@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import css from "./Hero.module.scss";
+import LinkYellow from "../LinkYellow/LinkYellow";
 
 const Hero = () => {
   return (
@@ -15,12 +15,7 @@ const Hero = () => {
               <br></br> Yuliia Maltseva
             </h2>
           </div>
-
-          <div className="flex items-center justify-center">
-            <Link href="/about" className={css.link}>
-              Read more
-            </Link>
-          </div>
+          <LinkYellow pass="/about">Read more</LinkYellow>
         </div>
         <div className="w-100">
           <Image

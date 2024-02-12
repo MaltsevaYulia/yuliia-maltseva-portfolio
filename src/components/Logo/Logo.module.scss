@@ -1,8 +1,21 @@
 .logo {
   z-index: 99;
-  font-family: "DancingScript-Bold", cursive;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  width: 250px;
+  display: flex;
+  // font-family: "DancingScript-Bold", cursive;
+
+  &_img {
+    width: 75px;
+  }
+
+  &_name {
+    font-style: normal;
+    font-weight: 400;
+    
+    @media screen and (min-width: 768px) {
+      font-size: 30px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 44px;
+    }
+  }
 }

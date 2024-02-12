@@ -1,17 +1,18 @@
 import React, { useContext } from "react";
+import { Allison } from "next/font/google";
 import Image from "next/image";
 import css from "./Logo.module.scss";
 import { ThemeContext } from "@/context/ThemeContext";
 
+const allison = Allison({
+  subsets: ["latin"],
+  weight: "400",
+});
+
 const Logo = () => {
   const { mode } = useContext(ThemeContext);
   return (
-    <>
-      {/* <div className={css.logo}>Yuliia Maltseva</div> */}
-      {/* <svg width="20" height="20">
-        <use href="/logo/Frame 2.png" />
-      </svg> */}
-
+    <div className={css.logo}>
       <Image
         // src="/logo/YM-logo-light.png"
         src={
@@ -20,16 +21,12 @@ const Logo = () => {
         alt="logo"
         width={250}
         height={40}
-        className={css.logo}
+        className={css.logo_img}
       />
-      {/* <Image
-        src="/logo/my-logo-removebg-preview.png"
-        alt="logo"
-        width={150}
-        height={40}
-        className={css.logo}
-      /> */}
-    </>
+      <div className={`${allison.className} ${css.logo_name}`}>
+        Yuliia Maltseva
+      </div>
+    </div>
   );
 };
 
