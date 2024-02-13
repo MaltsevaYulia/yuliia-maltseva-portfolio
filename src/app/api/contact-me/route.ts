@@ -1,12 +1,11 @@
-import { Request } from "express";
-import { NextResponse } from "next/server";
-import sendMail, { IProps } from "@/helpers/sendMail";
+import { NextRequest, NextResponse } from "next/server";
+import sendMail from "@/helpers/sendMail";
 
-export async function POST(req: Request): Promise<NextResponse> {
+export async function POST(req: NextRequest): Promise<NextResponse> {
   try {
     const data = await req.json();
     console.log("🚀 ~ POST ~ data:", data);
-    const { name, subject, body } = data  as IProps;
+    const { name, subject, body } = data;
     const info = await sendMail({
       to: "muscoprof@gmail.com",
       name,
