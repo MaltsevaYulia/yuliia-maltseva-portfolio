@@ -11,9 +11,8 @@ const Skills = () => {
       <Title tag="h2">My Skills</Title>
       <div className="flex flex-wrap items-center justify-center gap-5 my-5 bg-gray-300 rounded-xl w-fit p-3 md:p-5">
         {skills.map((skill, i) => (
-          <div className="w-12">
+          <div className="w-12" key={i}>
             <Image
-              key={i}
               src={`/skills/${skill.icon}.svg`}
               alt={skill.name}
               width={48}

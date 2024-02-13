@@ -13,8 +13,9 @@ const Contacts = () => {
         <div>
           <Text>
             Excited about the possibility of collaborating on exciting projects!
-            I'm currently looking for opportunities, my inbox is always open
-            whether for hiring me or just to talk. Can't wait to connect!
+            I&apos;m currently looking for opportunities, my inbox is always
+            open whether for hiring me or just to talk. Can&apos;t wait to
+            connect!
           </Text>
 
           <address>
