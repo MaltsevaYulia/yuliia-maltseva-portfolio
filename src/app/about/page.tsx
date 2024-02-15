@@ -1,4 +1,5 @@
 import AboutInfo from "@/components/AboutInfo/AboutInfo";
+import AdditionalInfo from "@/components/AdditionalInfo/AdditionalInfo";
 import Skills from "@/components/Skills/Skills";
 import Title from "@/components/Title/Title";
 import React from "react";
@@ -8,7 +9,8 @@ const About = () => {
     <div>
       <Title>About me</Title>
       <AboutInfo />
-      <Skills/>
+      <Skills />
+      <AdditionalInfo/>
     </div>
   );
 };

@@ -10,12 +10,13 @@ const Contacts = () => {
     <>
       <Title>Contacts</Title>
       <div className={styles.contacts_box}>
-        <div>
+        <div className="flex flex-col gap-5">
           <Text>
             Excited about the possibility of collaborating on exciting projects!
             I&apos;m currently looking for opportunities, my inbox is always
-            open whether for hiring me or just to talk. Can&apos;t wait to
-            connect!
+            open, whether it&apos;s for hiring me or just to talk. Can&apos;t
+            wait to connect! If you need an adaptive, cross-browser website as
+            well, feel free to contact me.
           </Text>
 
           <address>

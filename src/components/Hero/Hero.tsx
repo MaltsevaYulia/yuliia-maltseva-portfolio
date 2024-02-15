@@ -11,7 +11,7 @@ const Hero = () => {
           <div className="flex flex-col text-start justify-center mb-2">
             <h1 className={css.text}>Frontend developer</h1>
             <h2 className={css.title}>
-              Hello,my name is
+              Hello, my name is
               <br></br> Yuliia Maltseva
             </h2>
           </div>

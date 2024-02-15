@@ -9,7 +9,12 @@ const Title = ({
   tag?: string;
 }) => {
   if (tag === "h2") return <h2 className={css.title}>{children}</h2>;
-  else return <h1 className={css.title}>{children}</h1>;
+  else
+    return (
+      <div className="text-center">
+        <h1 className={css.title}>{children}</h1>
+      </div>
+    );
 };
 
 export default Title;
