@@ -9,35 +9,28 @@ import validationSchema from "@/schemas/validationSchema";
 import styles from "./ContactMeForm.module.scss";
 
 const ContactMeForm = () => {
-  const handleSubmit = async (values, actions) => {
-    const { name, email, message } = values;
+  async function handleSubmit(values, actions) {
+    try {
+      const response = await fetch("api/contact-me", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(values),
+      });
 
-    const formData = {
-      email,
-      name,
-      subject: "test",
-      body: `<div>${message}</div>`,
-    };
-
-    const response = await fetch("api/contact-me", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    const { success, error } = await response.json();
-
-    if (success) {
-      alert("Your inquiry has been submitted!");
-      actions.resetForm();
-    } else if (error) {
-      console.error(error);
-      alert("Error while submitting your inquiry: ", error);
+      const result = await response.json();
+      if (result.success) {
+        console.log(result);
+        actions.resetForm();
+      } else {
+        console.error("Submission failed:", result);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
     }
-  };
+  }
 
   return (
     <Formik
