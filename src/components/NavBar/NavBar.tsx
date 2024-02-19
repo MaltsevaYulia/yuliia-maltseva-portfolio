@@ -1,10 +1,12 @@
 "use client";
 import React, { useContext } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import navBarLinks from "@/constants/navBarLinks";
 import { ThemeContext } from "@/context/ThemeContext";
 import css from "./NavBar.module.scss";
 import useMedia from "@/hooks/useMedia";
+
 
 const NavBar = ({
   isOpen,
@@ -15,6 +17,12 @@ const NavBar = ({
 }) => {
   const { mode } = useContext(ThemeContext);
   const { mobile } = useMedia();
+  const pathname = usePathname();
+  console.log("🚀 ~ pathname:", pathname)
+
+  const isActiveLink = (href: string) => {
+    return pathname === href;
+  };
 
   return (
     <nav
@@ -29,7 +37,9 @@ const NavBar = ({
           <li key={id} onClick={toggleBurgerMenu}>
             <Link
               href={url}
-              className={css.nav_link}
+              className={`${css.nav_link} ${
+                isActiveLink(url) ? css.nav_link_active : ""
+              }`}
               target={
                 title === "Certificates" || title === "Resume" ? "_blank" : ""
               }

@@ -7,14 +7,16 @@ import BurgerMenu from "./BurgerMenu/BurgerMenu";
 
 const Header = () => {
   return (
-    <header className={`container ${css.header}`}>
-      <h1 className="visually-hidden ">
-        Yuliia Maltseva FullStack Developer portfolio
-      </h1>
-      <Logo />
-      <div className={css.wrapper}>
-        <DarkModeToggle />
-        <BurgerMenu />
+    <header className={` ${css.header}`}>
+      <div className={`container ${css.header_container}`}>
+        <h1 className="visually-hidden ">
+          Yuliia Maltseva FullStack Developer portfolio
+        </h1>
+        <Logo />
+        <div className={css.wrapper}>
+          <DarkModeToggle />
+          <BurgerMenu />
+        </div>
       </div>
     </header>
   );

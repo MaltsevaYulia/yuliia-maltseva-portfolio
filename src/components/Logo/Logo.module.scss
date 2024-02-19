@@ -1,6 +1,7 @@
 .logo {
   z-index: 99;
   display: flex;
+  align-items: center;
   // font-family: "DancingScript-Bold", cursive;
 
   &_img {
@@ -10,9 +11,10 @@
   &_name {
     font-style: normal;
     font-weight: 400;
-    
+    font-size: 30px;
+
     @media screen and (min-width: 768px) {
-      font-size: 30px;
+      font-size: 38px;
     }
     @media screen and (min-width: 1280px) {
       font-size: 44px;
