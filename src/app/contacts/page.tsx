@@ -4,6 +4,7 @@ import Title from "@/components/Title/Title";
 
 import styles from "./contacts.module.scss";
 import Text from "@/components/Text/Text";
+import ContactsList from "@/components/ContactsList/ContactsList";
 
 const Contacts = () => {
   return (
@@ -18,38 +19,7 @@ const Contacts = () => {
             wait to connect! If you need an adaptive, cross-browser website as
             well, feel free to contact me.
           </Text>
-
-          <address>
-            <ul>
-              <li>
-                <a
-                  href="https://t.me/MUSjuly"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @MUSjuly
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/yuliya-maltseva/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Linkedin
-                </a>
-              </li>
-              <li>
-                <a href="mailto:julyysp@gmail.com">julyysp@gmail.com</a>
-              </li>
-              <li>
-                <a href="tel:+380954157901">+380954157901</a>
-              </li>
-              <li>
-                <a href="tel:+35797612734">+35797612734</a>
-              </li>
-            </ul>
-          </address>
+          <ContactsList />
         </div>
         <ContactMeForm />
       </div>
