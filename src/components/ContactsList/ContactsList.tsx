@@ -7,8 +7,8 @@ const ContactsList = () => {
   return (
     <address>
       <ul>
-        {contactsList.map(({ title, url, icon }) => (
-          <li className="flex items-center gap-2 cursor">
+        {contactsList.map(({ title, url, icon, id }) => (
+          <li key={id} className="flex items-center gap-2 cursor">
             {selectIcon(icon)}
             <Link href={url} target="_blank" rel="noopener noreferrer">
               {title}
